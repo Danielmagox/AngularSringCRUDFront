@@ -1,3 +1,18 @@
-<p>
-  edit works!
-</p>
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Modificar Datos</h3>
+      <div class="card-body">
+          <div class="form-group">
+            <form [formGroup]="myForm" (ngSubmit)="Actualizar()">
+              <label for="name">Name</label>
+              <input type="text" formControlName="name" class="form-control" />
+              <label for="apellidos">apellidos</label>
+              <input type="text" formControlName="apellidos" class="form-control" />
+              <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Guardar</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

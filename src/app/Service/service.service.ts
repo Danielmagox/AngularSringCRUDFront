@@ -16,7 +16,12 @@ export class ServiceService {
   }
 
   createPersona(persona: Persona) {
-    console.log(persona + " *************************** ");
     return this.http.post<Persona>(this.Url, persona);
+  }
+  getPersonaId(id: number) {
+    return this.http.get<Persona>(this.Url + "/" + id);
+  }
+  updatePersona(persona: Persona) {
+    return this.http.put<Persona>(this.Url + "/" + persona.id, persona);
   }
 }
