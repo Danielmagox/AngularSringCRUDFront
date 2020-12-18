@@ -7,11 +7,11 @@ import { Observable } from "rxjs";
   providedIn: "root",
 })
 export class ServiceService {
-  Url = "http://localhost:8080/AngularSpringCRUD/personas";
+  Url = "/personas";
 
   constructor(private http: HttpClient) {}
 
-  getPersonas() {
+  getPersonas(): Observable<Persona[]> {
     return this.http.get<Persona[]>(this.Url);
   }
 }
