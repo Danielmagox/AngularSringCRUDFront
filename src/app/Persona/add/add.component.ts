@@ -27,7 +27,6 @@ export class AddComponent implements OnInit {
 
   Guardar() {
     const persona = { ...this.myForm.value };
-    console.log(persona + "GUARDAR");
     this.service.createPersona(persona).subscribe((data) => {
       alert("Agregado");
       this.router.navigate(["listar"]);

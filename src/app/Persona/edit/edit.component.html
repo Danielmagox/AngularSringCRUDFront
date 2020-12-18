@@ -3,13 +3,13 @@
     <div class="card-header">
       <h3>Modificar Datos</h3>
       <div class="card-body">
-          <div class="form-group">
+          <div *ngIf="myForm" class="form-group">
             <form [formGroup]="myForm" (ngSubmit)="Actualizar()">
               <label for="name">Name</label>
               <input type="text" formControlName="name" class="form-control" />
               <label for="apellidos">apellidos</label>
               <input type="text" formControlName="apellidos" class="form-control" />
-              <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Guardar</button>
+              <button [disabled]="myForm.pristine" type="submit" class="btn btn-primary" style="margin-top: 10px;">Actualizar</button>
             </form>
           </div>
       </div>
