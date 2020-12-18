@@ -16,6 +16,7 @@ export class ServiceService {
   }
 
   createPersona(persona: Persona) {
+    console.log(persona + " *************************** ");
     return this.http.post<Persona>(this.Url, persona);
   }
 }

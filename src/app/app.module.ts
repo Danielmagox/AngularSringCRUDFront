@@ -6,13 +6,19 @@ import { ListarComponent } from "./Persona/listar/listar.component";
 import { EditComponent } from "./Persona/edit/edit.component";
 import { AppRoutingModule } from ".//app-routing.module";
 import { AddComponent } from "./Persona/add/add.component";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ServiceService } from "../app/Service/service.service";
 import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent, ListarComponent, EditComponent, AddComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [ServiceService],
   bootstrap: [AppComponent],
 })
