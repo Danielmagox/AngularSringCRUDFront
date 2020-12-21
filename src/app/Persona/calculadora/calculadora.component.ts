@@ -11,8 +11,10 @@ import { PersonaService } from "src/app/Service/service.service";
 export class CalculadoraComponent implements OnInit {
   sum: number;
   med: number;
+  des: number;
   clicked: boolean;
   clicked2: boolean;
+  clicked3: boolean;
 
   constructor(
     private router: Router,
@@ -31,6 +33,9 @@ export class CalculadoraComponent implements OnInit {
     this.service.getPersonaMediaSueldos().subscribe((data) => {
       this.med = data;
     });
+    this.service.getDesviacionTipica().subscribe((data) => {
+      this.des = data;
+    });
   }
 
   suma() {
@@ -41,5 +46,10 @@ export class CalculadoraComponent implements OnInit {
   media() {
     this.clicked2 = !this.clicked2;
     return this.med;
+  }
+
+  desviacion() {
+    this.clicked3 = !this.clicked3;
+    return this.des;
   }
 }

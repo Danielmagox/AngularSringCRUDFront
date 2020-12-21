@@ -31,6 +31,10 @@ export class PersonaService {
   getPersonaMediaSueldos() {
     return this.http.get<number>(this.Url + "/" + "sueldos-media");
   }
+  //Devuelve la desviación típica de los sueldos
+  getDesviacionTipica() {
+    return this.http.get<number>(this.Url + "/" + "sueldos-desviacion");
+  }
   //Modifica el objeto que se le pase en la ruta con el ID establecido por el componente
   updatePersona(persona: Persona) {
     return this.http.put<Persona>(this.Url + "/" + persona.id, persona);
