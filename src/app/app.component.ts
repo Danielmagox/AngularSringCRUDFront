@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = "AngularSpringCRUD";
+  title = "a la Base de datos !";
 
   constructor(private router: Router) {}
 

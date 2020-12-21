@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
 import { Router } from "@angular/router";
 import { Persona } from "src/app/Modelo/Persona";
-import { ServiceService } from "src/app/Service/service.service";
+import { PersonaService } from "src/app/Service/service.service";
 
 @Component({
   selector: "app-add",
@@ -14,15 +14,12 @@ export class AddComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private service: ServiceService,
+    private service: PersonaService,
     private fb: FormBuilder
   ) {}
 
   ngOnInit() {
-    this.myForm = this.fb.group({
-      name: [""],
-      apellidos: [""],
-    });
+    this.buildForm();
   }
 
   Guardar() {
@@ -30,6 +27,12 @@ export class AddComponent implements OnInit {
     this.service.createPersona(persona).subscribe((data) => {
       alert("Agregado");
       this.router.navigate(["listar"]);
+    });
+  }
+  buildForm() {
+    this.myForm = this.fb.group({
+      name: [""],
+      apellidos: [""],
     });
   }
 }

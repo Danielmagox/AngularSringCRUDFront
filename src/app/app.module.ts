@@ -7,7 +7,7 @@ import { EditComponent } from "./Persona/edit/edit.component";
 import { AppRoutingModule } from ".//app-routing.module";
 import { AddComponent } from "./Persona/add/add.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { ServiceService } from "../app/Service/service.service";
+import { PersonaService } from "../app/Service/service.service";
 import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
@@ -19,7 +19,7 @@ import { HttpClientModule } from "@angular/common/http";
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [ServiceService],
+  providers: [PersonaService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

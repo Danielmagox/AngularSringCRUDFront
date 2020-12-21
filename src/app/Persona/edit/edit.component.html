@@ -3,7 +3,9 @@
     <div class="card-header">
       <h3>Modificar Datos</h3>
       <div class="card-body">
+        <!--Comprobamos primero que exista el formulario-->
           <div *ngIf="myForm" class="form-group">
+            <!--El formulario en el componente es myForm y cuando se pulse el botón se llama a Actualizar()-->
             <form [formGroup]="myForm" (ngSubmit)="Actualizar()">
               <label for="name">Name</label>
               <input type="text" formControlName="name" class="form-control" />
