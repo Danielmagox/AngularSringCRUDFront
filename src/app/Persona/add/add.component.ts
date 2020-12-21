@@ -33,6 +33,7 @@ export class AddComponent implements OnInit {
     this.myForm = this.fb.group({
       name: [""],
       apellidos: [""],
+      sueldo: [""],
     });
   }
 }
