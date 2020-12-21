@@ -2,4 +2,5 @@ export class Persona {
   id: number;
   name: String;
   apellidos: String;
+  sueldo: number;
 }

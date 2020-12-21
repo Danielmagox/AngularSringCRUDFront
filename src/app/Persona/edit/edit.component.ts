@@ -47,6 +47,7 @@ export class EditComponent implements OnInit {
     this.myForm = this.fb.group({
       name: [this.persona.name],
       apellidos: [this.persona.apellidos],
+      sueldo: [this.persona.sueldo],
     });
   }
 }
