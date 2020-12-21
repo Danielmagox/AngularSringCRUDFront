@@ -18,4 +18,7 @@ export class AppComponent {
   Nuevo() {
     this.router.navigate(["add"]);
   }
+  Calculadora() {
+    this.router.navigate(["calculadora"]);
+  }
 }

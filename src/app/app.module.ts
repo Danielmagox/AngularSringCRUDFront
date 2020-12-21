@@ -9,9 +9,16 @@ import { AddComponent } from "./Persona/add/add.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { PersonaService } from "../app/Service/service.service";
 import { HttpClientModule } from "@angular/common/http";
+import { CalculadoraComponent } from "./Persona/calculadora/calculadora.component";
 
 @NgModule({
-  declarations: [AppComponent, ListarComponent, EditComponent, AddComponent],
+  declarations: [
+    AppComponent,
+    ListarComponent,
+    EditComponent,
+    AddComponent,
+    CalculadoraComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
