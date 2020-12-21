@@ -27,6 +27,10 @@ export class PersonaService {
   getPersonaSumaSueldos() {
     return this.http.get<number>(this.Url + "/" + "sueldos-suma");
   }
+  //Devuelve la media de los sueldos
+  getPersonaMediaSueldos() {
+    return this.http.get<number>(this.Url + "/" + "sueldos-media");
+  }
   //Modifica el objeto que se le pase en la ruta con el ID establecido por el componente
   updatePersona(persona: Persona) {
     return this.http.put<Persona>(this.Url + "/" + persona.id, persona);
