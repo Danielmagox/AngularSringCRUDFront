@@ -23,6 +23,10 @@ export class PersonaService {
   getPersonaId(id: string) {
     return this.http.get<Persona>(this.Url + "/" + id);
   }
+  //Devuelve la suma de los sueldos
+  getPersonaSumaSueldos() {
+    return this.http.get<number>(this.Url + "/" + "sueldos-suma");
+  }
   //Modifica el objeto que se le pase en la ruta con el ID establecido por el componente
   updatePersona(persona: Persona) {
     return this.http.put<Persona>(this.Url + "/" + persona.id, persona);

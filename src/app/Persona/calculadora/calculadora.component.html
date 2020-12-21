@@ -1,3 +1,17 @@
-<p>
-  calculadora works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <button
+        (click)="suma()"
+        class="btn btn-primary"
+        style="margin-top: 10px"
+        style="margin-left: 10px"
+      >
+        Suma
+      </button>
+    </div>
+    <div class="col-sm">
+      <h3 *ngIf="clicked">{{ sum }}</h3>
+    </div>
+  </div>
+</div>
