@@ -27,4 +27,8 @@ export class PersonaService {
   updatePersona(persona: Persona) {
     return this.http.put<Persona>(this.Url + "/" + persona.id, persona);
   }
+  //Borra un usuario de la bbdd
+  deletePersona(persona: Persona) {
+    return this.http.delete<Persona>(this.Url + "/" + persona.id);
+  }
 }
