@@ -22,33 +22,34 @@ export class CalculadoraComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  ngOnInit() {
-    this.obtenerDatos();
-  }
-
-  obtenerDatos() {
-    this.service.getPersonaSumaSueldos().subscribe((data) => {
-      this.sum = data;
-    });
-    this.service.getPersonaMediaSueldos().subscribe((data) => {
-      this.med = data;
-    });
-    this.service.getDesviacionTipica().subscribe((data) => {
-      this.des = data;
-    });
-  }
+  ngOnInit() {}
 
   suma() {
+    if (!this.clicked) {
+      this.service.getPersonaSumaSueldos().subscribe((data) => {
+        this.sum = data;
+      });
+    }
     this.clicked = !this.clicked;
     return this.sum;
   }
 
   media() {
+    if (!this.clicked2) {
+      this.service.getPersonaMediaSueldos().subscribe((data) => {
+        this.med = data;
+      });
+    }
     this.clicked2 = !this.clicked2;
     return this.med;
   }
 
   desviacion() {
+    if (!this.clicked3) {
+      this.service.getDesviacionTipica().subscribe((data) => {
+        this.des = data;
+      });
+    }
     this.clicked3 = !this.clicked3;
     return this.des;
   }

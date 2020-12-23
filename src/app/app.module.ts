@@ -10,8 +10,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { PersonaService } from "../app/Service/service.service";
 import { HttpClientModule } from "@angular/common/http";
 import { CalculadoraComponent } from "./Persona/calculadora/calculadora.component";
-import { NgxChartsModule } from "@swimlane/ngx-charts";
-import { ChartsComponent } from './charts/charts.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +18,6 @@ import { ChartsComponent } from './charts/charts.component';
     EditComponent,
     AddComponent,
     CalculadoraComponent,
-    ChartsComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +25,6 @@ import { ChartsComponent } from './charts/charts.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgxChartsModule,
   ],
   providers: [PersonaService],
   bootstrap: [AppComponent],
